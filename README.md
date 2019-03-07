@@ -1,6 +1,6 @@
-# traderepublic-blog
+# your-blog
 
-> official traderepublic blog
+> official your blog
 
 ## Build Setup
 

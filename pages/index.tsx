@@ -10,8 +10,8 @@ export default class extends Vue {
       <section class="container">
         <div>
           <Logo />
-          <h1 class="title">traderepublic-blog</h1>
-          <h2 class="subtitle">official traderepublic blog</h2>
+          <h1 class="title">your-blog</h1>
+          <h2 class="subtitle">official your blog</h2>
           <div class="links">
             <a href="https://nuxtjs.org/" target="_blank" class="button--green">
               Documentation

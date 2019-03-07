@@ -1,7 +1,7 @@
 {
-  "name": "traderepublic-blog",
+  "name": "your-blog",
   "version": "1.0.0",
-  "description": "official traderepublic blog",
+  "description": "official your blog",
   "author": "makiri",
   "private": true,
   "scripts": {
