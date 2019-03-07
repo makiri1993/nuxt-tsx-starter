@@ -1,0 +1,38 @@
+{
+  "name": "traderepublic-blog",
+  "version": "1.0.0",
+  "description": "official traderepublic blog",
+  "author": "makiri",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts dev",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "dev-spa": "nuxt-ts dev --spa",
+    "build-spa": "nuxt-ts build --spa",
+    "start-spa": "nuxt-ts start --spa",
+    "generate": "nuxt-ts generate",
+    "precommit": "npm run lint",
+    "tsc": "tsc --showConfig",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "testc": "tsc -p tsconfig.json",
+    "lint": "tslint --project .",
+    "lintfix": "tslint --fix --project .",
+    "post-update": "yarn upgrade --latest",
+    "clean": "rm -rf yarn.lock node_modules"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.6.0",
+    "cross-env": "^5.2.0",
+    "nuxt-ts-edge": "latest"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.1",
+    "sass-loader": "^7.1.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "vue-property-decorator": "^7.3.0"
+  }
+}
