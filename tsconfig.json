@@ -1,5 +1,4 @@
 {
-  "extends": "@nuxt/typescript-edge",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -9,22 +8,35 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["@types/node", "@nuxt/vue-app-edge"],
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app"
+    ],
     "paths": {
-      // "@/*": ["*"]
+      "@/*": [
+        "*"
+      ],
+      "~/*": [
+        "./*"
+      ]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "noEmit": true
   },
-  // "include": [
-  // "src/**/*.ts",
-  // "src/**/*.tsx",
-  // "src/**/*.vue",
-  // "tests/**/*.ts",
-  // "tests/**/*.tsx"
-  // ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

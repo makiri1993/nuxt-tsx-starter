@@ -5,13 +5,13 @@
   "author": "makiri",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts dev",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "dev-spa": "nuxt-ts dev --spa",
-    "build-spa": "nuxt-ts build --spa",
-    "start-spa": "nuxt-ts start --spa",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "dev-spa": "nuxt dev --spa",
+    "build-spa": "nuxt build --spa",
+    "start-spa": "nuxt start --spa",
+    "generate": "nuxt generate",
     "precommit": "npm run lint",
     "tsc": "tsc --showConfig",
     "test": "jest",
@@ -23,16 +23,18 @@
     "clean": "rm -rf yarn.lock node_modules"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.14",
     "cross-env": "^5.2.0",
-    "nuxt-ts-edge": "latest"
+    "nuxt": "^2.5.1"
   },
   "devDependencies": {
+    "@nuxt/typescript": "^2.5.1",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.1",
     "sass-loader": "^7.1.0",
-    "tslint-config-prettier": "^1.17.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "vue-property-decorator": "^7.3.0"
+    "vue-property-decorator": "^8.1.0"
   }
 }
