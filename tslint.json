@@ -11,7 +11,7 @@
     "curly": [true, "ignore-same-line"]
   },
   "rules": {
-    "prettier": true,
+    // "prettier": true,
     "member-access": [true, "no-public"],
     "variable-name": [true, "allow-leading-underscore"],
     "interface-name": false,
@@ -32,7 +32,7 @@
     "jsx-wrap-multiline": false,
     "jsx-no-multiline-js": false,
     "jsx-boolean-value": false,
-    "max-line-length": [true, 160],
+    "max-line-length": [true, 180],
     "no-console": [true, "log", "error", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
@@ -58,23 +58,11 @@
     "no-duplicate-imports": true,
     "prefer-const": true,
     "trailing-comma": true,
-    "one-line": [
-      true,
-      "check-catch",
-      "check-else",
-      "check-open-brace",
-      "check-whitespace"
-    ],
+    "one-line": [true, "check-catch", "check-else", "check-open-brace", "check-whitespace"],
     // "variable-name": [true, "ban-keywords", "check-format", "disallow-leading-underscore", "allow-pascal-case"],
     "no-consecutive-blank-lines": true
   },
   "linterOptions": {
-    "exclude": [
-      "node_modules/**",
-      "dist/**",
-      "dist.js/**",
-      ".nuxt/**",
-      "tests/**"
-    ]
+    "exclude": ["node_modules/**", "dist/**", "dist.js/**", ".nuxt/**", "tests/**"]
   }
 }
