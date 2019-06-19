@@ -8,14 +8,32 @@ const config: NuxtConfiguration = {
    */
   head: {
     title: 'pkg.name',
-    meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: 'pkg.description' }],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    meta: [
+      {
+        charset: 'utf-8',
+      },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'pkg.description',
+      },
+    ],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+      },
+    ],
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#fff',
+  },
 
   /*
    ** Global CSS
@@ -27,6 +45,18 @@ const config: NuxtConfiguration = {
    */
   plugins: [],
 
+  /*
+   ** Dev Nuxt.js modules
+   */
+  devModules: ['@nuxtjs/tailwindcss'],
+
+  /*
+   ** Tailwindconfiguration
+   */
+  tailwindcss: {
+    configPath: '~/config/tailwind.js',
+    cssPath: '~/assets/main.css',
+  },
   /*
    ** Nuxt.js modules
    */

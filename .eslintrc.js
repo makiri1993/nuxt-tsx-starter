@@ -1,20 +1,96 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
-  },
+  plugins: ['@typescript-eslint'],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+    useJSXTextNode: true,
+    project: './tsconfig.json',
+    tsconfigRootDir: '.',
+    extraFileExtensions: ['.vue'],
   },
   extends: [
     '@nuxtjs',
     'plugin:nuxt/recommended',
-    'plugin:prettier/recommended'
+    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+    'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    'plugin:vue/recommended',
+    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
-  plugins: [
-    'prettier'
-  ],
-  // add your custom rules here
-  rules: {}
+  rules: {
+    '@typescript-eslint/explicit-member-accessibility': [2, { accessibility: 'no-public', overrides: { properties: 'explicit' } }],
+
+    '@typescript-eslint/no-unused-vars': 'error',
+  },
 }
+//   rules: {
+//     //   defaultSeverity: 'warning',
+//     //   extends: ['tslint:recommended', 'tslint-config-prettier'],
+//     //   rulesDirectory: ['tslint-plugin-prettier'],
+//     //   jsRules: {
+//     //     'object-literal-sort-keys': false,
+//     //     'ordered-imports': false,
+//     //     'no-console': false,
+//     //     'no-shadowed-variable': false,
+//     //     'no-empty': [true, 'allow-empty-functions'],
+//     //     curly: [true, 'ignore-same-line'],
+//     //   },
+//     //   rules: {
+//     //     // "prettier": true,
+//     //     'member-access': [true, 'no-public'],
+//     //     'variable-name': [true, 'allow-leading-underscore'],
+//     //     'interface-name': false,
+//     //     'object-literal-sort-keys': false,
+//     //     'ordered-imports': false,
+//     //     'no-empty': [true, 'allow-empty-functions'],
+//     //     curly: [true, 'ignore-same-line'],
+//     //     'no-bitwise': false,
+//     //     'arrow-parens': false,
+//     //     quotemark: [true, 'single'],
+//     //     semicolon: [true, 'never'],
+//     //     indent: [true, 'spaces', 2],
+//     //     'class-name': true,
+//     //     eofline: false,
+//     //     'jsdoc-format': true,
+//     //     'jsx-no-lambda': false,
+//     //     'jsx-no-bind': false,
+//     //     'jsx-wrap-multiline': false,
+//     //     'jsx-no-multiline-js': false,
+//     //     'jsx-boolean-value': false,
+//     //     'max-line-length': [true, 180],
+//     //     'no-console': [true, 'log', 'error', 'info', 'time', 'timeEnd', 'trace'],
+//     //     'no-construct': true,
+//     //     'no-debugger': true,
+//     //     'no-duplicate-variable': true,
+//     //     // "no-empty": false,
+//     //     'no-eval': true,
+//     //     'no-shadowed-variable': true,
+//     //     'no-string-literal': true,
+//     //     'no-switch-case-fall-through': true,
+//     //     'no-trailing-whitespace': false,
+//     //     'no-unused-expression': true,
+//     //     'member-ordering': false,
+//     //     // "member-access": false,
+//     //     'object-literal-shorthand': true,
+//     //     'no-empty-interface': true,
+//     //     'no-duplicate-super': true,
+//     //     'no-duplicate-switch-case': true,
+//     //     'no-parameter-reassignment': true,
+//     //     'no-return-await': true,
+//     //     'no-unused-variable': true,
+//     //     'triple-equals': true,
+//     //     'use-isnan': true,
+//     //     'no-duplicate-imports': true,
+//     //     'prefer-const': true,
+//     //     'trailing-comma': true,
+//     //     'one-line': [true, 'check-catch', 'check-else', 'check-open-brace', 'check-whitespace'],
+//     //     // "variable-name": [true, "ban-keywords", "check-format", "disallow-leading-underscore", "allow-pascal-case"],
+//     //     'no-consecutive-blank-lines': true,
+//     //   },
+//     //   linterOptions: {
+//     //     exclude: ['node_modules/**', 'dist/**', 'dist.js/**', '.nuxt/**', 'tests/**'],
+//     //   },
+//   },
+// }
